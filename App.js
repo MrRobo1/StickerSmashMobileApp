@@ -93,10 +93,10 @@ export default function App() {
 
   return (
     <GestureHandlerRootView style={styles.container}>
-      <View style={styles.container}>
         <View style={styles.imageContainer}>
           <View ref={imageRef} collapsable={false}>
             <ImageViewer
+              ref={imageRef}
               placeholderImageSource={PlaceholderImage}
               selectedImage={selectedImage}
             />
@@ -121,7 +121,6 @@ export default function App() {
           <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
         </EmojiPicker>
         <StatusBar style="light" />
-      </View>
     </GestureHandlerRootView>
   );
 }

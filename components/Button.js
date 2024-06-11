@@ -22,7 +22,7 @@ export default function Button({ label, theme, onPress }) {
     }
   return (
     <View style={styles.buttonContainer}>
-      <Pressable style={styles.button}>
+      <Pressable onPress={onPress} style={styles.button}>
         <Text style={styles.buttonLabel}>{label}</Text>
       </Pressable>
     </View>
